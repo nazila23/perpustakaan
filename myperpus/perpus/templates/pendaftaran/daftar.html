@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;;
+        }
+        body{
+            background: #125C13;
+            padding: 0 10px;
+        }
+        .wrapper{
+            max-width: 500px;
+            width: 100%;
+            background: #fff;
+            margin: 20px auto;
+            padding: 30px;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+        }
+        .wrapper .title{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #125C13;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .wrapper .form{
+            width: 100%;
+        }
+        .wrapper .form .input_field{
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .wrapper .form .input_field label{
+            width: 200%;
+            color:#757575;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .wrapper .form .input_field .input,
+        .wrapper .form .input_field .textarea{
+            width: 500%;
+            outline: none;
+            border: 1px solid #d5dbd9;
+            font-size: 15px;
+            padding: 8px 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        .wrapper .form .input_field .textarea{
+            resize: none;
+            height: 125px;
+        }
+        .wrapper .form .input_field .custom_select{
+            position: relative;
+            width: 500%;
+            height: 37px;
+        }
+        .wrapper .form .input_field .custom_select select{
+            appearance: none;
+            border: 1px solid #d5dbd9;
+            height: 100%;
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 3px;
+            outline: none;
+        }
+        .wrapper .form .input_field .custom_select:before{
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            border: 8px solid;
+            border-color: #d5dbd9 transparent transparent transparent;
+            pointer-events: none;
+        }
+        .wrapper .form .input_field .input:focus,
+        .wrapper .form .input_field .textarea:focus,
+        .wrapper .form .input_field select:focus{
+            border: 1px solid #125C13;
+        }
+        .wrapper .form .input_field .btn{
+            width: 100%;
+            padding: 8px 10px;
+            font-size: 15px;
+            border: 0;
+            background: #125C13;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=DIV, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Pendaftaran Anggota Perpustakaan Kita
+        </div>
+        <div class="form">
+            <div class="input_field">
+                <label>NIK</label>
+                <input type="text" class="input" name="nik">
+            </div>
+            <div class="input_field">
+                <label>Nama Lengkap</label>
+                <input type="text" class="input" name="nama">
+            </div>
+            <div class="input_field">
+                <label>Jenis Kelamin</label>
+                <div class="custom_select">
+                    <select name="jenis_kelamin">
+                        <option value="">Pilih</option>
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_field">
+                <label>Tempat Lahir</label>
+                <input type="text" class="input" name="tempat_lahir">
+            </div>
+            <div class="input_field">
+                <label>Tanggal Lahir</label>
+                <input type="date" class="input" name="tgl_lahir">
+            </div>
+            <div class="input_field">
+                <label>Alamat Tinggal</label>
+                <textarea class="textarea" name="alamat"></textarea>
+            </div>
+            <div class="input_field">
+                <label>No.Handphone</label>
+                <input type="text" class="input" name="no_hp">
+            </div>
+            <div class="input_field">
+                <label>Email</label>
+                <input type="text" class="input" name="email">
+            </div>
+            <div class="input_field">
+                <label>Password</label>
+                <input type="password" class="input" name="password">
+            </div>
+            <div class="input_field">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
